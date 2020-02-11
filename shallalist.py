@@ -5,7 +5,7 @@ __author__	=	"Jason Brown"
 __email__	=	"jason.brown@svarthal.io"
 __version__	=	"0.2"
 __license__	=	"Apache"
-__date__	=	"20200209"
+__date__	=	"20200211"
 
 
 import urllib.request
@@ -57,7 +57,7 @@ def main():
 	remove('header.txt')
 	remove('shallalist.txt')
 
-	chown('db.adfiltering', 0, 115)
+	chown('db.adfiltering', 0, 114)
 	chmod('db.adfiltering', 0o644)
 	move('db.adfiltering', '/etc/bind/db.ad-filtering')
 
