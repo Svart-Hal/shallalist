@@ -50,16 +50,16 @@ def main():
 		Open files and write to disk
 	'''
 
-	with open('header.txt', 'r') as header, open('shallalist.txt', 'r') as shallalist, open('db.adfiltering', 'w') as dbfile:
+	with open('header.txt', 'r') as header, open('shallalist.txt', 'r') as shallalist, open('db.shallalist', 'w') as dbfile:
 		dbfile.write(header.read() + shallalist.read().strip())
 	dbfile.close()
 
 	remove('header.txt')
 	remove('shallalist.txt')
 
-	chown('db.adfiltering', 0, 114)
-	chmod('db.adfiltering', 0o644)
-	move('db.adfiltering', '/etc/bind/db.ad-filtering')
+	chown('db.shallalist', 0, 114)
+	chmod('db.shallalist', 0o644)
+	move('db.shallalist', '/etc/bind/svarthal/db.shallalist')
 
 if __name__ == '__main__':
 	main()
